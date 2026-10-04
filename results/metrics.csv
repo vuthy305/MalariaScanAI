@@ -1,0 +1,5 @@
+Model,Parameters,Trainable parameters,Training time (sec),Best Val Macro-F1,Test Accuracy,Precision,Recall,Macro-F1
+ResNet-18,11177538,11177538,1063,0.9582,0.9713,0.969,0.9703,0.9697
+ResNet-50,23512130,23512130,1361,0.9549,0.9744,0.973,0.9728,0.9729
+ResNet-50 + augmentation,23512130,23512130,2323,0.9581,0.9747,0.9753,0.971,0.9731
+Improved ResNet-50,23512130,22067202,1016,0.9492,0.9695,0.9669,0.9686,0.9678

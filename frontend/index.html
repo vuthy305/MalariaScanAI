@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MalariaScan AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <h1>MalariaScan AI</h1>
+    <p>Malaria screening from blood cell images</p>
+  </header>
+
+  <main class="workspace">
+    <section class="panel" aria-labelledby="upload-title">
+      <h2 id="upload-title">Upload a blood cell image</h2>
+      <input type="file" id="file-input" accept="image/*">
+      <label class="dropzone" id="dropzone" for="file-input">
+        <img id="preview" alt="Preview of the uploaded blood cell" hidden>
+        <span id="dropzone-hint">Choose a microscope image of one red blood cell, or drop it here.<br>JPG or PNG.</span>
+      </label>
+      <button id="recognize" disabled>Check Cell</button>
+      <p class="message" id="message" role="alert" hidden></p>
+    </section>
+
+    <section class="panel result" aria-live="polite" aria-labelledby="result-title">
+      <h2 id="result-title">Result</h2>
+      <p class="word" id="word">—</p>
+      <p class="confidence" id="confidence">Upload an image and select Check Cell.</p>
+
+      <h3>Class probabilities</h3>
+      <ol class="top3" id="top3"></ol>
+            <div id="explain" hidden>
+        <h3>Where the model looked</h3>
+        <img class="heatmap" id="heatmap" alt="The uploaded cell with a colour overlay marking the area that influenced the result most">
+        <p class="caption">Red and yellow mark the area that influenced this result the most. Blue areas mattered least.</p>
+
+        <h3>What this means</h3>
+        <p class="meaning" id="meaning"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>University prototype for screening support, not a medical diagnosis. It classifies one stained red blood cell image as parasitized or uninfected. Results must be confirmed by a trained health worker or a laboratory test.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

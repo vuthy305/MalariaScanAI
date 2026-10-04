@@ -1,0 +1,13 @@
+# Everything needed for training and the web app (on Colab most are preinstalled).
+torch
+torchvision
+scikit-learn
+pandas
+matplotlib
+opencv-python
+kagglehub
+jupyter
+fastapi
+uvicorn[standard]
+python-multipart
+pillow

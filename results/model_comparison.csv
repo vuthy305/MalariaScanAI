@@ -1,0 +1,4 @@
+Model,Parameters,Test Accuracy,Precision,Recall,Macro-F1
+ResNet-18,11177538,0.9713,0.969,0.9703,0.9697
+ResNet-50,23512130,0.9744,0.973,0.9728,0.9729
+Improved ResNet-50,23512130,0.9695,0.9669,0.9686,0.9678

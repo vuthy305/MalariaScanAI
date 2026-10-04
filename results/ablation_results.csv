@@ -1,0 +1,4 @@
+Ablation Experiment,Augmentation,Fine-tuning,Scheduler,Macro-F1
+A: ResNet-50 baseline,No,No,No,0.9729
+B: + augmentation,Yes,No,No,0.9731
+C: + fine-tuning + scheduler,Yes,Yes,Yes,0.9678
